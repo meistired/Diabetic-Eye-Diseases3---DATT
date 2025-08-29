@@ -13,7 +13,6 @@
   .column {
     width: 100%;
   }
-
 }
 
 * {
@@ -23,65 +22,26 @@
 }
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  font-family: Montserrat, sans-serif;
+  line-height: 1.4;
   color: #333;
 }
 
 .page-section {
-  padding: 60px 0;
-  position: relative;
-}
-
-.page-section:nth-child(even) {
-  background-color: #f1f0f0;
-  /* Slightly darker gray for even sections */
-}
-
-.section-content {
-  max-width: 50%;
-  margin: 0 auto;
-  padding: 30px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.section-header {
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #ffffff;
-}
-
-h2 {
-  color: #444;
-  margin: 0;
-}
-
-.section-divider {
-  height: 1px;
-  background: linear-gradient(to right, transparent, #f3f3f3, transparent);
-  margin: 40px 0;
+  margin: 3em 0;
 }
 
 /* Header */
 .header {
-  width: 100vw;
-  height: 100px;
-  background-color: #fff;
+  background-color: #c1c1c1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 0.5em;
-  margin-bottom: 2em;
 }
 
-.img-eye {
-  width: auto;
-  height: 100px;
-  filter: brightness(0.5);
-  /* padding-bottom: 5%; */
+.section-header {
+  margin: 0em 0em 2em;
 }
 
 .logo {
@@ -125,29 +85,42 @@ a {
 }
 
 .banner {
-  background-color: #000;
+  display: flex;
+  gap: 3em;
+  height: 80vh;
 }
 
 /* Header Ending */
 
 /* Intro */
 .banner-txt {
-  /* position: absolute; */
-  font-size: 2em;
-  /* left: 40%;
-  top: 16%; */
-  color: #ffffff;
-  align-content: center;
+  width: 60%;
+  /* font-size: 2em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+h1 {
+  font-size: 2.5em;
+}
+
+.img-eye {
+  width: 40%;
+  height: auto;
+  filter: brightness(0.5);
+  object-fit: cover;
+}
+
 
 .hand {
   background-repeat: no-repeat;
-  width: 50%;
+  width: 50vw;
   height: auto;
   margin-left: auto;
-  margin-right: 45%;
+  margin-right: 40%;
   align-content: center;
-  background-color: #ffffff;
   -webkit-mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
   mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
   mask-mode: alpha;
@@ -177,8 +150,6 @@ a {
 
 .container1 {
   position: relative;
-  padding: 0;
-  height: 5%;
 }
 
 .introtxt {
@@ -200,20 +171,6 @@ a {
 
 /* Section 1*/
 
-.section1 {
-  display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
-  justify-content: center;
-  gap: 30px;
-  margin: 3rem auto;
-  max-width: 1400px;
-}
-
-.title1 {
-  align-content: center;
-}
-
 /*Glaucoma*/
 .glaucoma-eye-img {
   width: 200px;
@@ -227,7 +184,7 @@ a {
 }
 
 .flip-card {
-  background-color: transparent;
+  /* background-color: transparent; */
   border-radius: 10%;
   width: 900px;
   height: 600px;
@@ -549,8 +506,7 @@ a {
   background-color: rgba(255, 255, 255, 0.8);
   color: #272626;
   padding: 1.2em;
-  width: 40%;
-  height: 80%;
+  width: 40vw;
   max-height: 80%;
   border: 2px dashed black;
   position: absolute;
@@ -558,15 +514,8 @@ a {
   transform: translateY(-50%);
   right: 15%;
   text-align: center;
-  font-size: 1.2em;
-  font-family: Haettenschweiler;
   overflow: auto;
   /* Add scroll if content overflows */
-  box-sizing: border-box;
-}
-
-.section2content {
-  padding: 10px;
 }
 
 .symptoms-list {
@@ -597,16 +546,14 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 30px;
+  scale: 0.8;
 }
 
 .section1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem auto;
-  max-width: 1400px;
+  justify-content: center;
 }
 
 .column {
@@ -658,6 +605,13 @@ a {
 }
 
 /*Section 4*/
+
+.vision-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
 .vision-text {
   text-align: center;
   font-size: 1.5em;
@@ -670,9 +624,7 @@ a {
 }
 
 .image {
-  display: block;
   width: 350px;
-  height: 350px;
   height: auto;
 }
 
@@ -688,8 +640,9 @@ a {
   transition: .5s ease;
 }
 
-.containeer:hover .overlay {
+.containeer:hover .overlay, .containeer:active .overlay {
   opacity: 1;
+  cursor: pointer;
 }
 
 .text {
@@ -718,17 +671,8 @@ a {
 .title1 {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
-}
-
-.body {
-  background-color: #d8dbd8;
-  font-family: "Montserrat", "sans-serif";
-  font-size: 20px;
-  color: #141414;
 }
 
 .footer {
-  margin: 0%;
-  width: 100%;
+  width: 100vw;
 }
