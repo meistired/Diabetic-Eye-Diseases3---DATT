@@ -8,157 +8,133 @@
     scroll-padding: 100px;
   }
 }
-  
-  @media screen and (max-width: 500px) {
+
+@media screen and (max-width: 500px) {
   .column {
     width: 100%;
   }
-
 }
 
-*{margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .page-section {
-            padding: 60px 0;
-            position: relative;
-        }
-        
-        .page-section:nth-child(even) {
-            background-color: #f1f0f0; /* Slightly darker gray for even sections */
-        }
-        
-        .section-content {
-            max-width: 50%;
-            margin: 0 auto;
-            padding: 30px;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        
-        .section-header {
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #ffffff;
-        }
-        
-        h2 {
-            color: #444;
-            margin: 0;
-        }
-        
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #f3f3f3, transparent);
-            margin: 40px 0;
-        }
+  font-family: Montserrat, sans-serif;
+  line-height: 1.4;
+  color: #333;
+}
+
+.page-section {
+  margin: 3em 0;
+}
 
 /* Header */
-.header{width: 100%;
-  height: 100px;
-  background-color: #ffffff;
+.header {
+  background-color: #c1c1c1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-position: fixed;
-  top: 0;
-  padding: 30px 5%;
-  margin-bottom: 2%;
-  z-index: 2;
+  padding: 1em 0.5em;
 }
 
-
-
-.img-eye
-{
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  filter: brightness(0.5);
-padding-bottom: 5%;
+.section-header {
+  margin: 0em 0em 2em;
 }
 
-.logo
-{
- width: 120px; 
- float: left;
- text-align: left;
-}
-nav { order: 1;
+.logo {
+  width: 120px;
+  float: left;
+  text-align: left;
 }
 
-.cta{ order: 2;
+nav {
+  order: 1;
 }
 
-.nav_links{list-style: none;
+.cta {
+  order: 2;
 }
 
-.nav_links li{ display: inline-block;
-padding: 0 20px;
-
+.nav_links {
+  list-style: none;
 }
 
-.nav_links li a {transition: all 0.3s ease 0s;}
-
-.nav_links li a:hover {transition: all 0.3s ease 0s;
-color: #3f3f3d;
-padding: 10px;
-background-color:#c0c0c0; 
- border-radius: 5px;}
-
-li, a {text-decoration: none;
-color: #141414;
-font-size: 20px; 
-font-weight: 550px;
+.nav_links li {
+  display: inline-block;
+  padding: 0 20px;
 }
 
-.banner {background-color: #f0f0f0;}
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+li,
+a {
+  text-decoration: none;
+  color: #141414;
+  font-size: 20px;
+  font-weight: 550px;
+}
+
+.banner {
+  display: flex;
+  gap: 3em;
+  height: 80vh;
+}
 
 /* Header Ending */
 
 /* Intro */
-.banner-txt
-{
-  position: absolute;
-  font-size: 2em;
-  left: 40%;
-  top: 16%;
-  color: #ffffff;
+.banner-txt {
+  width: 60%;
+  /* font-size: 2em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.img-eye {
+  width: 40%;
+  height: auto;
+  filter: brightness(0.5);
+  object-fit: cover;
+}
+
+
+.hand {
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: 40%;
   align-content: center;
- 
-
+  -webkit-mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+  mask-mode: alpha;
+  -webkit-mask-mode: alpha;
 }
 
-.hand
-{
-
-background-repeat: no-repeat;
-width: 50%;
-height: auto;
-margin-left: auto;
-margin-right: 45%;
-align-content: center;
-background-color: #ffffff;
--webkit-mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
-mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
-mask-mode: alpha;
--webkit-mask-mode: alpha;
-}
 @media (max-width: 768px) {
   .introtxt {
-    position: static;        /* Remove absolute positioning */
-    width: 90%;              /* Expand width for small screens */
-    margin: 2em auto;        /* Center and space it */
+    position: static;
+    /* Remove absolute positioning */
+    width: 90%;
+    /* Expand width for small screens */
+    margin: 2em auto;
+    /* Center and space it */
     top: auto;
     bottom: auto;
     right: auto;
@@ -167,106 +143,53 @@ mask-mode: alpha;
 
 @media (max-width: 480px) {
   .introtxt {
-    padding: 1.5em;          /* Slightly reduce padding on very small screens */
+    padding: 1.5em;
+    /* Slightly reduce padding on very small screens */
   }
 }
 
- .container1
- {
-position: relative;
-padding:0;
-height: 5%;
- }
-
-
-.introtxt
-{
-background-color: rgba(111, 199, 142, 0.7);
-color: #ffffff;
-padding: 2em;
-width: 40%;
-height: auto;
-border: 2px dashed black;
-position: absolute;
-top: 8%;
-bottom:8%;
-right: 25%;
-text-align: center;
-align-content: center;
- font-family: Haettenschweiler;
+.container1 {
+  position: relative;
 }
-.introtxt p {
-  font-size: 1.5em;
-}
-.introtxt h2 {
-  font-size: 2em;
+
+.introtxt {
+  background-color: rgba(111, 199, 142, 0.7);
+  color: #ffffff;
+  padding: 2em;
+  width: 40%;
+  height: auto;
+  border: 2px dashed black;
+  /* position: absolute;
+  top: 8%;
+  bottom: 8%;
+  right: 25%; */
   text-align: center;
-  color: rgb(255, 255, 255);
-}
-
-.introtxt2
-{
-background-color: rgb(255, 255, 255, 0.8);
-color: #272626;
-padding: 1em;
-width: 45%;
-height: auto;
-border: 2px dashed black;
-position: absolute;
-top: 8%;
-bottom:8%;
-right: 15%;
-text-align: center;
-align-content: center;
- font-family: Haettenschweiler;
-}
-.introtxt2 p {
-  font-size: 1.5em;
-}
-.introtxt2 h2 {
-  color: #50aa6b;
-  font-size: 2em;
-  text-align: center;
+  align-content: center;
 }
 
 /*Intro Ending */
 
- /* Section 1*/
-
-.section1
-{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  gap: 30px; 
-  margin: 3rem auto;
-  max-width: 1400px;
-} 
-
-.title1
-{
-  align-content: center;
-}
+/* Section 1*/
 
 /*Glaucoma*/
- .glaucoma-eye-img
-  {
-    width: 200px;
-    height: 200px;
-  }
-.G
-{
+.glaucoma-eye-img {
+  width: 200px;
+  height: 200px;
+}
+
+.G {
   width: 900px;
   height: 600px;
   border-radius: 10%;
 }
+
 .flip-card {
-  background-color: transparent;
+  /* background-color: transparent; */
   border-radius: 10%;
   width: 900px;
   height: 600px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 
@@ -283,11 +206,12 @@ align-content: center;
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -299,27 +223,27 @@ align-content: center;
 
 .flip-card-back {
   background-color: rgb(74, 197, 115);
- border-radius: 10%;
+  border-radius: 10%;
   color: white;
-   font-size: 1.5em;
- padding: 10px;
-  transform: rotateY(180deg);}
+  font-size: 1.5em;
+  padding: 10px;
+  transform: rotateY(180deg);
+}
+
 /*Ending Glaucoma*/
 
 /* Diabetic Retinopathy */
 
-.diabetic-retinopathy-eye-img
-{
-    width: 200px;
-    height: 200px;
+.diabetic-retinopathy-eye-img {
+  width: 200px;
+  height: 200px;
 }
 
-.DR
-  {
-    width: 900px;
-    height: 600px;
-    border-radius: 10%;
-  }
+.DR {
+  width: 900px;
+  height: 600px;
+  border-radius: 10%;
+}
 
 .flip1-card {
   background-color: transparent;
@@ -327,7 +251,7 @@ align-content: center;
   width: 900px;
   height: 600px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 
@@ -344,11 +268,12 @@ align-content: center;
   transform: rotateY(180deg);
 }
 
-.flip1-card-front, .flip1-card-back {
+.flip1-card-front,
+.flip1-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -360,29 +285,28 @@ align-content: center;
 
 .flip1-card-back {
   background-color: rgb(74, 197, 115);
- border-radius: 10%;
+  border-radius: 10%;
   color: white;
-   font-size: 1.5em;
- padding: 10px;
-  transform: rotateY(180deg);}
+  font-size: 1.5em;
+  padding: 10px;
+  transform: rotateY(180deg);
+}
 
 /* Ending of Diabetic Retinopathy */
 
 
 /*Cataracts*/
 
-.C
-{
+.C {
   width: 900px;
   height: 600px;
-   border-radius: 10%;
+  border-radius: 10%;
 }
 
-.cataracts-eye-img
-{
-    width: 200px;
-    height: 200px;
-    margin-bottom: 0;
+.cataracts-eye-img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0;
 }
 
 
@@ -392,7 +316,7 @@ align-content: center;
   width: 900px;
   height: 600px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 
@@ -409,11 +333,12 @@ align-content: center;
   transform: rotateY(180deg);
 }
 
-.flip2-card-front, .flip2-card-back {
+.flip2-card-front,
+.flip2-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -424,7 +349,7 @@ align-content: center;
 }
 
 .flip2-card-back {
-   background-color: rgb(74, 197, 115);
+  background-color: rgb(74, 197, 115);
   border-radius: 10%;
   color: white;
   font-size: 1.5em;
@@ -434,30 +359,32 @@ align-content: center;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;}
+  box-sizing: border-box;
+}
+
 /*Ending Cataracts*/
 
 
 /*Macular Degeneration*/
 
-.macular-degeneration-eye-img
-{
-    width: 200px;
-    height: 200px;
+.macular-degeneration-eye-img {
+  width: 200px;
+  height: 200px;
 }
-.MD
-{
+
+.MD {
   width: 900px;
   height: 600px;
   border-radius: 10%;
 }
+
 .flip3-card {
   background-color: transparent;
   border-radius: 10%;
   width: 900px;
   height: 600px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 
@@ -474,11 +401,12 @@ align-content: center;
   transform: rotateY(180deg);
 }
 
-.flip3-card-front, .flip3-card-back {
+.flip3-card-front,
+.flip3-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -491,7 +419,7 @@ align-content: center;
 }
 
 .flip3-card-back {
- background-color: rgb(74, 197, 115);
+  background-color: rgb(74, 197, 115);
   border-radius: 10%;
   color: white;
   font-size: 1.5em;
@@ -501,29 +429,30 @@ align-content: center;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;}
+  box-sizing: border-box;
+}
+
 /*Ending Macular Degeneration*/
 
 /*Dry Eye Syndrome*/
-.dry-eye-syndrome-eye-img
-{
+.dry-eye-syndrome-eye-img {
   width: 200px;
-    height: 200px;
+  height: 200px;
 }
 
-.DES
-{
+.DES {
   width: 900px;
   height: 600px;
   border-radius: 10%;
 }
+
 .flip4-card {
   background-color: transparent;
   border-radius: 10%;
   width: 900px;
   height: 600px;
   border: 1px solid #f1f1f1;
-  perspective: 1000px; 
+  perspective: 1000px;
 }
 
 
@@ -540,11 +469,12 @@ align-content: center;
   transform: rotateY(180deg);
 }
 
-.flip4-card-front, .flip4-card-back {
+.flip4-card-front,
+.flip4-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -555,7 +485,7 @@ align-content: center;
 }
 
 .flip4-card-back {
-background-color: rgb(74, 197, 115);
+  background-color: rgb(74, 197, 115);
   border-radius: 10%;
   color: white;
   font-size: 1.5em;
@@ -565,7 +495,9 @@ background-color: rgb(74, 197, 115);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;}
+  box-sizing: border-box;
+}
+
 /*Ending Dry Syndrome*/
 
 
@@ -574,8 +506,7 @@ background-color: rgb(74, 197, 115);
   background-color: rgba(255, 255, 255, 0.8);
   color: #272626;
   padding: 1.2em;
-  width: 40%;
-  height: 80%;
+  width: 40vw;
   max-height: 80%;
   border: 2px dashed black;
   position: absolute;
@@ -583,14 +514,8 @@ background-color: rgb(74, 197, 115);
   transform: translateY(-50%);
   right: 15%;
   text-align: center;
-  font-size: 1.2em;
-  font-family: Haettenschweiler;
-  overflow: auto; /* Add scroll if content overflows */
-  box-sizing: border-box;
-}
-
-.section2content {
-  padding: 10px;
+  overflow: auto;
+  /* Add scroll if content overflows */
 }
 
 .symptoms-list {
@@ -606,7 +531,7 @@ background-color: rgb(74, 197, 115);
 }
 
 .section2txt h2 {
-  color:#50aa6b ;
+  color: #50aa6b;
   font-size: 2em;
   margin-bottom: 15px;
 }
@@ -621,15 +546,14 @@ background-color: rgb(74, 197, 115);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 100%;
-  margin-bottom: 30px;}
+  scale: 0.8;
+}
 
-  .section1 {
+.section1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem auto;
-  max-width: 1400px;
+  justify-content: center;
 }
 
 .column {
@@ -648,12 +572,13 @@ background-color: rgb(74, 197, 115);
 }
 
 .section-content1 {
-  background-color: rgba(255, 255, 255, 0.95); /* white box with slight transparency */
+  background-color: rgba(255, 255, 255, 0.95);
+  /* white box with slight transparency */
   padding: 2em;
   border-radius: 10px;
   max-width: 800px;
   margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .button {
@@ -669,19 +594,25 @@ background-color: rgb(74, 197, 115);
   border-radius: 16px;
 }
 
-.p3
-{
+.p3 {
   text-align: center;
   font-size: 1.5em;
 }
 
-.header3
-{
+.header3 {
   text-align: center;
   color: #50aa6b;
 }
+
 /*Section 4*/
-.vision-text{
+
+.vision-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.vision-text {
   text-align: center;
   font-size: 1.5em;
 }
@@ -693,9 +624,7 @@ background-color: rgb(74, 197, 115);
 }
 
 .image {
-  display: block;
   width: 350px;
-  height: 350px;
   height: auto;
 }
 
@@ -711,8 +640,9 @@ background-color: rgb(74, 197, 115);
   transition: .5s ease;
 }
 
-.containeer:hover .overlay {
+.containeer:hover .overlay, .containeer:active .overlay {
   opacity: 1;
+  cursor: pointer;
 }
 
 .text {
@@ -727,12 +657,12 @@ background-color: rgb(74, 197, 115);
   text-align: center;
 }
 
-.header4{
+.header4 {
   text-align: center;
 }
 
-.subheader4
-{text-align: center;
+.subheader4 {
+  text-align: center;
   font-size: 1.2em;
 }
 
@@ -741,20 +671,8 @@ background-color: rgb(74, 197, 115);
 .title1 {
   width: 100%;
   text-align: center;
-  margin-bottom: 40px;
 }
 
-.body{background-color: #d8dbd8;
-font-family:"Montserrat", "sans-serif";
-font-size: 20px;
-color: #141414;
+.footer {
+  width: 100vw;
 }
-
-.footer
-{
-  margin: 0%;
-  width: 100%;
-}
-
-
-
