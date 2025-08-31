@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
 
 @media (prefers-reduced-motion: no-preference) {
-  * {
+  html {
     scroll-behavior: smooth;
     scroll-padding: 100px;
   }
@@ -27,7 +27,7 @@ body {
 
 /* Header */
 .header {
-  background-color: #7995fc;
+  background-color: #95d3c4;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -65,8 +65,6 @@ body {
 li,
 a {
   text-decoration: none;
-  color: #141414;
-  font-size: 20px;
   font-weight: 550;
 }
 
@@ -96,56 +94,34 @@ h1 {
   object-fit: cover;
 }
 
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
 .hand {
   background-repeat: no-repeat;
-  width: 50vw;
-  height: auto;
-  margin-left: auto;
-  margin-right: 40%;
-  align-content: center;
-  -webkit-mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
+  width: 100%;
+  align-self: center;
+  height: 100%;
+  object-fit: cover;
+  /* -webkit-mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
   mask-image: linear-gradient(to left, transparent, black 10%, black 90%, transparent);
   mask-mode: alpha;
-  -webkit-mask-mode: alpha;
-}
-
-@media (max-width: 768px) {
-  .introtxt {
-    position: static;
-    width: 90%;
-    margin: 2em auto;
-    top: auto;
-    bottom: auto;
-    right: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .introtxt {
-    padding: 1.5em;
-  }
-}
-
-.container1 {
-  position: relative;
+  -webkit-mask-mode: alpha; */
 }
 
 .introtxt {
-  background-color: rgba(111, 199, 142, 0.7);
-  color: #ffffff;
   padding: 2em;
-  width: 40%;
-  border: 2px dashed black;
   text-align: center;
   align-content: center;
 }
 
 /* Shared Flip Card Styles */
 .flip-card {
-  border-radius: 10%;
-  width: 900px;
-  height: 600px;
-  border: 1px solid #f1f1f1;
+  width: 720px;
+  height: 480px;
   perspective: 1000px;
 }
 
@@ -156,6 +132,10 @@ h1 {
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+}
+
+.flip-card:hover {
+  cursor: pointer;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -169,25 +149,17 @@ h1 {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 10%;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+  border-radius: 30px;
 }
 
 .flip-card-back {
-  background-color: rgb(74, 197, 115);
-  color: white;
-  font-size: 1.5em;
-  padding: 10px;
+  background-color: #72c4b8;
+  padding: 1em;
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
 }
 
 /* Individual flip images */
@@ -196,8 +168,8 @@ h1 {
 .cataracts-eye-img,
 .macular-degeneration-eye-img,
 .dry-eye-syndrome-eye-img {
-  width: 200px;
-  height: 200px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .G,
@@ -205,25 +177,15 @@ h1 {
 .C,
 .MD,
 .DES {
-  width: 900px;
-  height: 600px;
-  border-radius: 10%;
+  width: 720px;
+  height: 480px;
+  border-radius: 30px;
 }
 
 /* Section 2 */
 .section2txt {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #272626;
   padding: 1.2em;
-  width: 40vw;
-  max-height: 80%;
-  border: 2px dashed black;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 15%;
   text-align: center;
-  overflow: auto;
 }
 
 .symptoms-list {
@@ -235,13 +197,12 @@ h1 {
 
 .symptoms-list li {
   margin-bottom: 8px;
-  font-size: 1.1em;
 }
 
 .section2txt h2 {
   color: #50aa6b;
   font-size: 2em;
-  margin-bottom: 15px;
+  margin-bottom: 1em;
 }
 
 .section2txt p {
@@ -254,7 +215,6 @@ h1 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  scale: 0.8;
 }
 
 .section1 {
@@ -262,6 +222,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2em;
 }
 
 .column {
@@ -285,12 +246,12 @@ h1 {
   max-width: 800px;
   margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .button {
-  background-color: #ddd;
+  background-color: #95d3c4;
   border: none;
-  color: rgb(0, 0, 0);
   padding: 10px 20px;
   text-align: center;
   display: inline-block;
@@ -299,17 +260,21 @@ h1 {
   border-radius: 16px;
 }
 
-.p3 {
-  text-align: center;
-  font-size: 1.5em;
-}
-
 .header3 {
   text-align: center;
   color: #50aa6b;
 }
 
 /* Section 4 */
+
+.demo {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 3em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .vision-container {
   display: flex;
   flex-direction: column;
@@ -328,7 +293,7 @@ h1 {
 }
 
 .image {
-  width: 350px;
+  width: 20em;
   height: auto;
 }
 
@@ -357,12 +322,6 @@ h1 {
 .subheader4 {
   text-align: center;
   font-size: 1.2em;
-}
-
-/* Title styling */
-.title1 {
-  width: 100%;
-  text-align: center;
 }
 
 .footer {
