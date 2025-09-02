@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="DATT Website" content="DATT-Website" />
   <title>DATT Website</title>
+  <!-- <link rel="stylesheet" href="output.css"> -->
   <link rel="stylesheet" href="cleaned.css">
 </head>
 
@@ -16,6 +17,7 @@
       <img class="logo" src="./DATT_logo-mobg-nowrds.png" alt="DATT Logo">
     </div>
     <nav>
+      <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
       <ul class="nav_links">
         <li><a>Home</a></li>
         <li><a>About</a></li>
@@ -89,7 +91,7 @@
                 <img class="DR" src="Diabetic Retinopathy.jpg" alt="Diabetic Retinopathy">
               </div>
               <div class="flip-card-back">
-                <h1>Diabetic Retinopathy</h1>
+                <h3>Diabetic Retinopathy</h3>
                 <p>This condition occurs when high blood sugar damages the blood vessels in the retina. In early stages,
                   you may have no symptoms. Over time, it can cause blurry vision, floaters, dark spots, or even
                   blindness.</p>
@@ -109,7 +111,7 @@
                 <img class="C" src="cataractsfrontimg.jpg" alt="Cataracts">
               </div>
               <div class="flip-card-back">
-                <h1>Cataracts</h1>
+                <h3>Cataracts</h3>
                 <p>Cataracts cause the clear lens of the eye to become cloudy, making vision blurry, hazy, or dull. They
                   tend to develop earlier and progress faster in people with diabetes.</p>
                 <p>You might feel like you're looking through a foggy window. Surgery is used to treat and is safe and
@@ -128,7 +130,7 @@
                 <img class="MD" src="Macular degeneration.png" alt="Macular Degeneration">
               </div>
               <div class="flip-card-back">
-                <h1>Macular Degeneration</h1>
+                <h3>Macular Degeneration</h3>
                 <p>This condition affects the macula, the part of the retina responsible for central vision. It isn't
                   caused by diabetes but is more common with age, especially in older adults with chronic conditions.</p>
                 <p>You may notice trouble seeing faces, reading, or driving and it typically affects people over age
@@ -147,7 +149,7 @@
                 <img class="DES" src="dryeye.jpg" alt="Dry Eye Syndrome">
               </div>
               <div class="flip-card-back">
-                <h1>Dry Eye Syndrome</h1>
+                <h3>Dry Eye Syndrome</h3>
                 <p>Dry eye is a common condition that usually falls into two main types: Evaporative Dry Eye and
                   Aqueous-Deficient Dry Eye. Evaporative Dry Eye happens when tears evaporate too quickly due to a lack
                   of oil, often caused by blocked glands in the eyelids.</p>
@@ -249,6 +251,56 @@
     </div>
   </div>
 
-  <img src="footer3.png" class="footer" alt="Footer Image">
+  <footer class="footer">
+    <div class="footernav">
+      <div>
+        <img src="./DATT_logo-nobg.png" alt="DATT logo" class="footerlogo">
+      </div>
+      <div class="footercols">
+        <h4>About Us</h4>
+        <ul>
+          <li>Who We Are</li>
+          <li>Membership</li>
+          <li>Community Outreach</li>
+          <li>Become a Volunteer</li>
+        </ul>
+      </div>
+      <div class="footercols">
+        <h4>Diabetes & You</h4>
+        <ul>
+          <li>Living With Diabetes</li>
+          <li>Complications</li>
+          <li>Healthy Eating</li>
+          <li>Children with Diabetes</li>
+        </ul>
+      </div>
+      <div class="footercols">
+        <h4>Contact Us</h4>
+        <div>
+          <div class="contact-info">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="text">10-12 Success Street<br>Chaguanas, Trinidad</div>
+          </div>
+          <div class="contact-info">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>
+            </div>
+            <div class="text">Phone: <span class="yellow">(868) 607-3288</span></div>
+          </div>
+          <div class="contact-info">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            </div>
+            <div class="text">Email <span class="yellow">info@diabetes-tt.org</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © All rights reserved Diabetes Association of Trinidad and Tobago
+    </div>
+  </footer>
 </body>
 </html>
